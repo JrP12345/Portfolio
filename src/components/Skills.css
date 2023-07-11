@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.skillcon {
+  color: white;
+}
+.skillh2 {
+  font-size: 100px;
+  position: relative;
+  top: -100%;
+  animation: slideTop 1.5s forwards;
+}
+@keyframes slideTop {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.iconcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itemms {
+  display: flex;
+  /* background-color: bisque; */
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin: 20px;
+  position: relative;
+    right: -100%;
+    animation: slideRi 1.5s forwards;
+}
+.itemms2 {
+  display: flex;
+  /* background-color: bisque; */
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin: 20px;
+  position: relative;
+    left: -100%;
+    animation: slideRi2 1.5s forwards;
+}
+@keyframes slideRi {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes slideRi2 {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.fntskill {
+  margin: 5px 10px;
+}
+
+@media (max-width: 950px) {
+  .iconcon {
+    flex-direction: column;
+    margin-top: 0;
+    /* background-color: antiquewhite; */
+    margin-left: 50px;
+  }
+  .itemms {
+    margin: 10px;
+    /* background-color: aliceblue; */
+    width: 200px;
+    justify-content: start;
+    align-items: center;
+    
+  }
+  .itemms2 {
+    margin: 10px;
+    /* background-color: aliceblue; */
+    width: 200px;
+    justify-content: start;
+    align-items: center;
+    
+  }
+
+  .skillcon {
+    margin-top: 0px;
+    justify-content: center;
+  }
+}

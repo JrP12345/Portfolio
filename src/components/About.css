@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ysabeau+SC:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.aboutcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 50px;
+}
+.aboutitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  /* font-size: 500px; */
+  margin-left: 60px;
+}
+@keyframes slideTop {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  font-size: 50px;
+  scale: 2;
+  position: relative;
+  top: -100%;
+  animation: slideTop 1.5s forwards;
+}
+.aboutsec {
+  width: 100vh;
+  padding: 50px 50px;
+  font-size: 25px;
+  position: relative;
+  right: -100%;
+  animation: slideRi 1.5s forwards;
+}
+@keyframes slideRi {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.aboutsec h3 {
+  margin: 20px;
+}
+@media (max-width: 950px) {
+  .vertical-text {
+    scale: 1;
+  }
+  .aboutsec{
+  padding: 10px 10px;
+
+  }
+  .aboutitle{
+   
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: 80vh;
+}
+@keyframes slideIn {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.contactcon {
+  padding: 20px;
+  border-radius: 15px;
+  margin-right: 20px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  box-shadow: rgba(236, 236, 241, 0.2) 0px 7px 40px 0px;
+  position: relative;
+  left: -100%;
+  animation: slideIn 1.5s forwards;
+}
+.contact-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+.contact-link:hover {
+  color: rgb(5, 83, 237);
+}
+.items {
+  display: flex;
+  margin: 20px;
+}
+.items h6 {
+  margin-left: 15px;
+}
+.portpic {
+  width: 300px;
+  border-radius: 10px;
+}
+.imagecon {
+  position: relative;
+  top: -100%;
+  animation: slideTop 1.5s forwards;
+}
+@keyframes slideTop {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.introcon {
+  /* padding: 10px; */
+  border-radius: 15px;
+  margin-left: 20px;
+  /* background-color: rgb(25, 24, 24); */
+  color: rgb(255, 255, 255);
+  width: 80vh;
+  font-size: 25px;
+  height: 250px;
+  position: relative;
+  right: -100%;
+  animation: slideRi 1.5s forwards;
+}
+@keyframes slideRi {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.cvbtn {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: bolder;
+  border: none;
+  font-size: large;
+}
+.cvbtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: 1s;
+}
+@media (max-width: 1450px) {
+  .introcon {
+    width: 70vh;
+    height: 250px;
+  }
+}
+@media (max-width: 1400px) {
+  .introcon {
+    width: 65vh;
+    height: 280px;
+
+  }
+}
+@media (max-width: 1350px) {
+  .introcon {
+    width: 60vh;
+    height: 290px;
+
+  }
+}
+@media (max-width: 1300px) {
+  .introcon {
+    width: 55vh;
+    height: 330px;
+  }
+}
+@media (max-width: 1250px) {
+  .introcon {
+    width: 50vh;
+  }
+}
+@media (max-width: 1200px) {
+  .introcon {
+    width: 55vh;
+ 
+  }
+}
+
+@media (max-width: 1150px) {
+  .introcon {
+    width: 55vh;
+  }
+}
+@media (max-width: 1050px) {
+  .introcon {
+    width: 45vh;
+  }
+  .container{
+    margin-left: 50px;
+
+  }
+}
+@media (max-width: 1015px) {
+  .introcon {
+    width: 50vh;
+    font-size: 23px;
+    margin-top: 25px;
+  }
+  .contactcon h4{
+    font-size: 23px;
+  }
+}
+@media (max-width: 950px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    height: max-content;
+  }
+  .introcon {
+    /* margin-bottom: 10px; */
+    animation: slideIn 1.5s forwards;
+  }
+  .introcon h2 {
+    text-align: center;
+  }
+  .portpic {
+    margin-bottom: 40px;
+    /* margin-top: 30px; */
+  }
+  .contactcon {
+    margin-bottom: 15px;
+    width: 250px;
+    margin-left: 25px;
+    right: -30%;
+    animation: slideIn 1.5s forwards;
+    margin-top: 50px;
+  }
+  .items i {
+    margin-left: 50px;
+  }
+  .contactcon h4 {
+    text-align: center;
+  }
+  .cvbtn {
+    /* margin-top: 20px; */
+    margin-left: 140px;
+  }
+  .imagecon {
+    animation: slideRi 1.5s forwards;
+  }
+}
