@@ -97,3 +97,11 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 500px) {
+  .skillcon{
+   margin: 0px 0px;
+  width: 500px;
+  /* background-color:s aliceblue; */
+  }
+}

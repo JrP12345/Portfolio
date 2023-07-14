@@ -68,3 +68,10 @@
     margin-left: 20px;
   }
 }
+@media (max-width: 500px) {
+  
+  .aboutsec{
+    padding: 0px 0px;
+   font-size: 20px;
+    }
+}

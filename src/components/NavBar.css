@@ -85,3 +85,8 @@
     margin-left: 15px;
 }
 }
+@media (max-width: 500px) {
+  .nav-bar {
+    width: 500px;
+  }
+}

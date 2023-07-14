@@ -185,7 +185,7 @@ body {
     margin-left: 25px;
     right: -30%;
     animation: slideIn 1.5s forwards;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .items i {
     margin-left: 50px;
@@ -200,4 +200,19 @@ body {
   .imagecon {
     animation: slideRi 1.5s forwards;
   }
+}
+@media (max-width: 450px) {
+  .container{
+    margin-left :80px;
+  } 
+}
+@media (max-width: 420px) {
+  .container{
+    margin-left :100px;
+  } 
+}
+@media (max-width: 400px) {
+  .container{
+    margin-left :120px;
+  } 
 }

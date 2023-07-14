@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: max-content;
+
   /* background-color: aliceblue; */
 }
 .itemcontainer {
@@ -70,9 +70,7 @@
   }
 }
 @media (max-width: 950px) {
-  body{
-    overflow: hidden;
-  }
+  
   .projcon {
     display: flex;
     flex-wrap: wrap;
@@ -86,4 +84,26 @@
   .card2 {
     width: 40%;
   }
+}
+@media (max-width: 500px) {
+  .projcontainer {
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+  }
+  .projtitle{
+    margin-right: 40px;
+  }
+  .projcon{
+    /* background-color: aliceblue; */
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .projtitle{
+    margin-right: 30px;
+  }
+ 
 }

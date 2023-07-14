@@ -83,7 +83,7 @@ function Home() {
           </div>
         </div>
         <div className="imagecon">
-          <Image src="portfolioimg.jpeg" className="portpic" alt="Image" />
+          <Image  src={process.env.PUBLIC_URL + "/portfolioimg.jpeg"} className="portpic" alt="Image" />
         </div>
         <div className="introcon">
           <h2>
