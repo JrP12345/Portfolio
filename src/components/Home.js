@@ -10,7 +10,7 @@ function Home() {
   const emailAddress = "prajapatijay2703@gmail.com";
   const phoneNumber = "9904542245";
   const handleDownload = () => {
-    const pdfUrl = "/RESUME(JAY PRAJAPATI).pdf";
+    const pdfUrl = process.env.PUBLIC_URL + '/RESUME(JAY PRAJAPATI).pdf';
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Jay_Prajapati_Resume.pdf"; // Set the desired filename for the downloaded file
