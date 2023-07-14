@@ -8,9 +8,9 @@ function Home() {
   const instagramUsername = "prajapatijay2703";
   const githubUsername = "JrP12345";
   const emailAddress = "prajapatijay2703@gmail.com";
-  const phoneNumber = "1234567890";
+  const phoneNumber = "9904542245";
   const handleDownload = () => {
-    const pdfUrl = "RESUME(JAY PRAJAPATI).pdf";
+    const pdfUrl = "/RESUME(JAY PRAJAPATI).pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Jay_Prajapati_Resume.pdf"; // Set the desired filename for the downloaded file
