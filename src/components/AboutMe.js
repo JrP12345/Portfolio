@@ -5,32 +5,21 @@ function AboutMe() {
     <>
       <div className="aboutcontainer">
         <div className="aboutitle">
-          <h2 className="vertical-text">About Me</h2>
+          <h2 className="abouttext">About Me</h2>
         </div>
         <div className="aboutsec">
-          <h3>
-            I am a third-year student pursuing a degree in Computer Science and
-             Engineering. I have a genuine passion for coding and
-            problem-solving.
+          <h3 className="aboutp">
+          Hello! I'm Jay Prajapati, a final-year student with a passion for website and application development. My journey in the world of technology began with a curiosity for how things work on the web, which soon evolved into a dedicated pursuit of becoming a proficient developer. I also have a solid understanding of data structures and algorithms (DSA).
           </h3>{" "}
-          <h3>
-            Throughout my studies, I have gained a foundation in
-            programming languages such as Java, C , and Python. I have also
-            learned about web development and databases.
+          <h3 className="aboutp">
+          I specialize in the MERN stack (MongoDB, Express.js, React, and Node.js) and have a solid understanding of various web development technologies.
           </h3>{" "}
-          <h3>
-            As a third-year student, I am eager to gain practical experience
-            through internships and projects. I am a dedicated learner,
-            detail-oriented, and can manage my time effectively to meet
-            deadlines.
+          <h3 className="aboutp">
+          As I approach the completion of my degree, I am eager to step into the professional world and contribute to innovative projects. My goal is to leverage my technical expertise to build impactful applications that enhance user experiences and drive business success.
           </h3>{" "}
-          <h3>
+          <h3 className="aboutp">
             {" "}
-            In summary, I am a third-year student in Computer Science and
-            Engineering with a strong foundation in programming
-            languages and practical experience. I am enthusiastic about learning
-            and ready to take on new challenges in the field of software
-            development.
+            Thank you for visiting my portfolio. I look forward to connecting with you and exploring potential opportunities to work together.
           </h3>
         </div>
       </div>

@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300&display=swap");
 
-.nav-bar {
+.navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 25px;
   width: 100%;
-  background-color: rgb(46, 47, 49); /* Default background color */
-  padding: 15px 0;
-  transition: background-color 0.3s ease-in-out;
+  top: 0;
+  background-color: #fff; /* Adjust as per your design */
+  z-index: 1000; /* Ensure a high z-index to keep it on top */
+  /* Add other styles like padding, box-shadow, etc. */
 }
 
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Adjust padding as needed */
+}
 .nav-bar.home-bg {
-  background-color: #f5f5f5;
+  background-color: white ;
 }
 
 .nav-bar.aboutme-bg {
@@ -36,7 +35,7 @@
   background-color: #f3e5f5;
 }
 .nav-link.home{
-  color: #333333;
+  color: #2e2e2e;
 }
 .nav-link.aboutme{
   color: #0d47a1;
@@ -73,6 +72,7 @@
   font-size: 25px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  text-align: center;
 }
 
 .nav-link::after {

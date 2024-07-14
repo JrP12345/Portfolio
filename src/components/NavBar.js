@@ -9,7 +9,9 @@ const NavBar = ({ scrollToSection }) => {
   useEffect(() => {
     const handleResize = () => {
       setShowIcon(window.innerWidth <= 950);
-      setHideItems(false); // Show menu items when resizing
+      if (window.innerWidth > 950) {
+        setHideItems(false); // Show menu items when resizing above 975px
+      }
     };
 
     const handleScroll = () => {
@@ -47,6 +49,9 @@ const NavBar = ({ scrollToSection }) => {
   const handleItemClick = (id) => {
     scrollToSection(id);
     setActiveSection(id); // Update active section immediately on click
+    if (window.innerWidth <= 975) {
+      setHideItems(true); // Close menu items after clicking on a section (mobile view)
+    }
   };
 
   return (

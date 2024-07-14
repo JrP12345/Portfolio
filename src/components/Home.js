@@ -25,96 +25,93 @@ const Home = () => {
     link.click();
   };
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
-      <NavBar scrollToSection={scrollToSection} />
       <div className="container" id="home">
-        <div className="contactcon">
-          <h4>CONTACT ME</h4>
-          <div className="items">
-            <i className="fa-brands fa-linkedin"></i>
-            <h6>
-              {" "}
-              <Link
-                className="contact-link"
-                to={`https://www.linkedin.com/in/${linkedinUsername}`}
-                target="_blank"
-              >
-                LinkedIn
-              </Link>
-            </h6>
-          </div>
-          <div className="items">
-            <i className="fa-brands fa-instagram"></i>
-            <h6>
-              {" "}
-              <Link
-                className="contact-link"
-                to={`https://www.instagram.com/${instagramUsername}`}
-                target="_blank"
-              >
-                Instagram
-              </Link>
-            </h6>
-          </div>
-          <div className="items">
-            <i className="fa-brands fa-github"></i>
-            <h6>
-              {" "}
-              <Link
-                className="contact-link"
-                to={`https://github.com/${githubUsername}`}
-                target="_blank"
-              >
-                GitHub
-              </Link>
-            </h6>
-          </div>
-          <div className="items">
-            <i className="fa-solid fa-envelope"></i>
-            <h6>
-              {" "}
-              <Link className="contact-link" to={`mailto:${emailAddress}`}>
-                Email
-              </Link>
-            </h6>
-          </div>
-          <div className="items">
-            <i className="fa-solid fa-phone"></i>
-            <h6>
-              {" "}
-              <Link className="contact-link" to={`tel:${phoneNumber}`}>
-                Call
-              </Link>
-            </h6>
-          </div>
-        </div>
-        <div className="imagecon">
+        <div className="homeconmainallthree">
           <Image
             src={`${process.env.PUBLIC_URL}/portfolioimg.jpeg`}
-            className="portpic"
+            className="portimage"
             alt="Image"
           />
-        </div>
-        <div className="introcon">
-          <h2>
-            Hey there! I'm Jay Prajapati, a final-year student specializing in
-            website and application development.
-          </h2>
-          <p>
-            I'm passionate about creating interactive and user-friendly web
-            applications using modern technologies.
-          </p>
-          <button className="cvbtn" onClick={handleDownload}>
-            Download CV
-          </button>
+
+          <div className="onetwothree">
+            <div className="lefthomecon">
+              <div className="introcon">
+                <h2 className="introheadtxt">
+                  Hey there! I'm Jay Prajapati, a final-year student
+                  specializing in website and application development.
+                </h2>
+                <p className="intropara">
+                  I'm passionate about creating interactive and user-friendly
+                  web applications using modern technologies.
+                </p>
+                <button className="cvbtn" onClick={handleDownload}>
+                  Download CV
+                </button>
+              </div>
+            </div>
+
+            
+                <div className="contactcon">
+                  <div className="items">
+                    <h6>
+                      {" "}
+                      <Link
+                        className="contact-link"
+                        to={`https://www.linkedin.com/in/${linkedinUsername}`}
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-linkedin"></i>
+                      </Link>
+                    </h6>
+                  </div>
+                  <div className="items">
+                    <h6>
+                      {" "}
+                      <Link
+                        className="contact-link"
+                        to={`https://www.instagram.com/${instagramUsername}`}
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-instagram"></i>
+                      </Link>
+                    </h6>
+                  </div>
+                  <div className="items">
+                    <h6>
+                      {" "}
+                      <Link
+                        className="contact-link"
+                        to={`https://github.com/${githubUsername}`}
+                        target="_blank"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </Link>
+                    </h6>
+                  </div>
+                  <div className="items">
+                    <h6>
+                      {" "}
+                      <Link
+                        className="contact-link"
+                        to={`mailto:${emailAddress}`}
+                      >
+                        <i className="fa-solid fa-envelope"></i>
+                      </Link>
+                    </h6>
+                  </div>
+                  <div className="items">
+                    <h6>
+                      {" "}
+                      <Link className="contact-link" to={`tel:${phoneNumber}`}>
+                        <i className="fa-solid fa-phone"></i>
+                      </Link>
+                    </h6>
+                  </div>
+               
+            </div>
+          </div>
         </div>
       </div>
       {/* AboutMe section */}

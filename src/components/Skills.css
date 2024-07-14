@@ -1,110 +1,114 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensure padding and borders are included in width and height */
 }
+
 .skillcon {
   color: #333333;
-  height: 100vh;
-  padding: 60px;
-  background-color:#e8f5e9;
+  min-height: 100vh;
+  background-color: #e8f5e9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 20px; /* Add some bottom padding */
 }
+
 .skillh2 {
   font-size: 100px;
-  position: relative;
-  top: -100%;
-  animation: slideTop 1.5s forwards;
+  width: 100%;
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
-@keyframes slideTop {
-  0% {
-    top: -30%;
-  }
-  100% {
-    top: 0;
-  }
+
+.aboutitle {
+  width: 100%;
+}
+
+.iconconatiners {
+  width: 100%; /* Ensure it uses full width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itemms:hover{
+ background-color:#daf1dc ;
 }
 .iconcon {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensure items are centered */
+  width: 80%; /* Ensure it uses full width */
+  /* background-color: #333333; */
 }
+
 .itemms {
+  flex: 0 1 calc(16.66% - 20px); /* Take up one-sixth minus margin */
+  margin: 10px; /* Margin around each item */
   display: flex;
-  /* background-color: bisque; */
-  padding: 10px;
-  justify-content: center;
+  flex-direction: column; /* Ensure icons and text are in a column */
   align-items: center;
-  font-size: 40px;
-  margin: 20px;
-  position: relative;
-    right: -100%;
-    animation: slideRi 1.5s forwards;
-}
-.itemms2 {
-  display: flex;
-  /* background-color: bisque; */
-  padding: 10px;
   justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  margin: 20px;
-  position: relative;
-    left: -100%;
-    animation: slideRi2 1.5s forwards;
+  padding: 10px;
+  font-size: 20px; /* Make font size smaller */
+  background-color: white; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better look */
+  aspect-ratio: 1 / 1; /* Ensure the items are square */
+  cursor: pointer;
 }
-@keyframes slideRi {
-  0% {
-    right: -10%;
-  }
-  100% {
-    right: 0;
-  }
-}
-@keyframes slideRi2 {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 0;
-  }
-}
+
 .fntskill {
-  margin: 5px 10px;
+  margin: 10px 0; /* Add margin between icon and text */
+  font-size: 16px; /* Adjust font size for skill name */
+}
+
+.progress-bar {
+  width: 80%; /* Adjust width as needed */
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px; /* Adjust height as needed */
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50; /* Adjust color as needed */
+}
+
+.skill-level {
+  margin-top: 5px; /* Add margin between progress bar and percentage */
+  font-size: 14px; /* Adjust font size for percentage */
 }
 
 @media (max-width: 950px) {
-  .iconcon {
-    flex-direction: column;
-    margin-top: 0;
-    /* background-color: antiquewhite; */
-    margin-left: 50px;
-  }
   .itemms {
-    margin: 10px;
-    /* background-color: aliceblue; */
-    width: 200px;
-    justify-content: start;
-    align-items: center;
-    
+    flex: 0 1 calc(33.33% - 20px); /* Three items per row */
   }
-  .itemms2 {
-    margin: 10px;
-    /* background-color: aliceblue; */
-    width: 200px;
-    justify-content: start;
-    align-items: center;
-    
+  
+  .skillh2 {
+    font-size: 75px; /* Decrease font size */
+    margin-bottom: 10px; /* Adjust margin as needed */
   }
 
   .skillcon {
-    margin-top: 0px;
-    justify-content: center;
+    padding: 20px; /* Adjust padding for smaller screens */
   }
 }
 
 @media (max-width: 500px) {
-  .skillcon{
-   margin: 0px 0px;
-  width: 500px;
-  /* background-color:s aliceblue; */
+  .itemms {
+    flex: 0 1 calc(50% - 20px); /* Two items per row */
+  }
+  
+  .skillh2 {
+    font-size: 50px; /* Further decrease font size */
+    margin-bottom: 5px; /* Adjust margin as needed */
+  }
+
+  .skillcon {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 }

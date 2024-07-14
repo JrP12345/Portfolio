@@ -1,80 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ysabeau+SC:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .aboutcontainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #0d47a1;
-  padding-top: 60px;
+  padding-top: 70px;
   height: 100vh;
   background-color: #e0f2f1;
-  
+  /* Adjust as needed */
 }
-.aboutitle {
+
+.abouttitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  /* font-size: 500px; */
-  margin-left: 60px;
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
-@keyframes slideTop {
-  0% {
-    top: -30%;
-  }
-  100% {
-    top: 0;
-  }
+
+.abouttext {
+  font-size: 100px; /* Adjust font size */
+  text-align: center; /* Center text horizontally */
 }
-.vertical-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  font-size: 50px;
-  scale: 2;
-  position: relative;
-  top: -100%;
-  animation: slideTop 1.5s forwards;
-}
+
 .aboutsec {
-  width: 100vh;
-  padding: 50px 50px;
-  font-size: 25px;
-  position: relative;
-  right: -100%;
-  animation: slideRi 1.5s forwards;
-}
-@keyframes slideRi {
-  0% {
-    right: -10%;
-  }
-  100% {
-    right: 0;
-  }
+  width: 70%;
+  font-size: 20px;
+  padding: 50px;
+  animation: slideRight 1.5s forwards;
 }
 .aboutsec h3 {
   margin: 20px;
 }
-@media (max-width: 950px) {
-  .vertical-text {
-    scale: 1;
-  }
-  .aboutsec{
-  padding: 10px 10px;
 
+@media (max-width: 950px) {
+
+  .abouttext {
+    font-size: 60px; /* Further decrease font size for smaller screens */
   }
-  .aboutitle{
-   
-    margin-left: 20px;
+  .aboutsec {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  .aboutsec {
+    width: 80%;
   }
 }
+
 @media (max-width: 500px) {
-  
-  .aboutsec{
-    padding: 0px 0px;
-   font-size: 20px;
-    }
+  .abouttext {
+    font-size: 30px; /* Further decrease font size for smaller screens */
+  }
+
+  .aboutsec {
+    width: 100%;
+    font-size: 16px;
+  }
 }
