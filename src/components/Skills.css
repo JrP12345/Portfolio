@@ -3,7 +3,10 @@
   padding: 0;
 }
 .skillcon {
-  color: white;
+  color: #333333;
+  height: 100vh;
+  padding: 60px;
+  background-color:#e8f5e9;
 }
 .skillh2 {
   font-size: 100px;

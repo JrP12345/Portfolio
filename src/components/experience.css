@@ -1,7 +1,16 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    color: white;
+
+.excontainer{
+  height: 100vh;
+  padding-top: 60px;
+  background-color:#fff8e1;
+  color: #4e342e;
+}
+.experiencetxt {
+  background-color: aqua;
+  width: 500px;
+  text-size-adjust: auto; /* Allow text to adjust size automatically */
 }

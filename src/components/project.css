@@ -6,16 +6,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* background-color: aliceblue; */
+ 
 }
 .itemcontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
-
+.projcontainer{
+  padding-top: 60px;
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
 .card {
   height: 250px;
   width: 200px;

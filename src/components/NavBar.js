@@ -1,73 +1,79 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ scrollToSection }) => {
   const [showIcon, setShowIcon] = useState(false);
   const [hideItems, setHideItems] = useState(false);
+  const [activeSection, setActiveSection] = useState("home"); // Default active section
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 950) {
-        setShowIcon(true);
-      } else {
-        setShowIcon(false);
-        setHideItems(false); // Show menu items when resizing
-      }
+      setShowIcon(window.innerWidth <= 950);
+      setHideItems(false); // Show menu items when resizing
     };
 
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 50;
+      const sections = document.querySelectorAll(".section");
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight &&
+          activeSection !== section.id
+        ) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    // Initial setup and cleanup for resize and scroll event listeners
+    handleScroll();
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeSection]);
 
   const toggleItemsVisibility = () => {
     setHideItems(!hideItems);
   };
 
+  const handleItemClick = (id) => {
+    scrollToSection(id);
+    setActiveSection(id); // Update active section immediately on click
+  };
+
   return (
-    <>
-      <nav>
-        <div className="nav-bar">
-          <h3>Jay Prajapati</h3>
-          <div className={`menu-items ${hideItems ? "hidden" : ""}`}>
-            <ul>
-              <li>
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
+    <nav className="navbar">
+      <div className={`nav-bar ${activeSection}-bg`}>
+        <h3  className={`nav-link ${activeSection}` }>Jay Prajapati</h3>
+        <div className={`menu-items ${hideItems ? "hidden" : ""}`}>
+          <ul>
+            {["home", "aboutme", "skills", "experience", "projects"].map((section) => (
+              <li key={section}>
+                <div
+                  className={`nav-link ${activeSection}` }
+                  onClick={() => handleItemClick(section)}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </div>
               </li>
-              <li>
-                <Link to="/aboutme" className="nav-link">
-                  About Me
-                </Link>
-              </li>
-              <li>
-                <Link to="/skills" className="nav-link">
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link to="/experience" className="nav-link">
-                  Experience
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects" className="nav-link">
-                  Projects
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {showIcon && (
-            <div className="menu-icon" onClick={toggleItemsVisibility}>
-              <i className="fas fa-bars"></i>
-            </div>
-          )}
+            ))}
+          </ul>
         </div>
-      </nav>
-    </>
+        {showIcon && (
+          <div className="menu-icon" onClick={toggleItemsVisibility}>
+            <i className="fas fa-bars"></i>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 
