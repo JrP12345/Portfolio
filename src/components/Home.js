@@ -19,7 +19,7 @@ const Home = () => {
     const pdfUrl = publicUrl + "Jay R Prajapati Resume.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Jay_Prajapati_Resume.pdf"; // Set the desired filename for the downloaded file
+    link.download = "BTechCSE_Jay-Prajapati.pdf"; // Set the desired filename for the downloaded file
     link.target = "_blank";
     link.click();
   };
@@ -38,8 +38,7 @@ const Home = () => {
             <div className="lefthomecon">
               <div className="introcon">
                 <h2 className="introheadtxt">
-                  Hey there! I'm Jay Prajapati, a final-year student
-                  specializing in website and application development.
+                Hey there ! I'm Jay Prajapati, a passionate  Web developer currently in my final year.
                 </h2>
                 <p className="intropara">
                   I'm passionate about creating interactive and user-friendly

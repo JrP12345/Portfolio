@@ -4,12 +4,11 @@ import "./Skills.css";
 function Skills() {
   const skills = [
     { name: "HTML", icon: "fa-html5", level: 90 },
-    { name: "CSS", icon: "fa-css3-alt", level: 100 },
-    { name: "JavaScript", icon: "fa-js", level: 80 },
-    { name: "React", icon: "fa-react", level: 75 },
+    { name: "CSS", icon: "fa-css3-alt", level: 90 },
+    { name: "JavaScript", icon: "fa-js", level: 70 },
+    { name: "React", icon: "fa-react", level: 70 },
     { name: "Node.js", icon: "fa-node", level: 70 },
-    { name: "Java", icon: "fa-java", level: 65 },
-    { name: "Python", icon: "fa-python", level: 60 },
+    { name: "C", icon: "fa-c", level: 60 },
     { name: "DBMS", icon: "fa-database", level: 55 }
   ];
 
