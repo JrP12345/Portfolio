@@ -8,6 +8,9 @@
   z-index: 1000; /* Ensure a high z-index to keep it on top */
   /* Add other styles like padding, box-shadow, etc. */
 }
+.navbar-burger{
+  color: rgb(157, 135, 11);
+}
 
 .nav-bar {
   display: flex;

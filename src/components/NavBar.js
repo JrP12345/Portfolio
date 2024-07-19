@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 
 const NavBar = ({ scrollToSection }) => {
-  const [showIcon, setShowIcon] = useState(false);
-  const [hideItems, setHideItems] = useState(false);
-  const [activeSection, setActiveSection] = useState("home"); // Default active section
+  const [showIcon, setShowIcon] = useState(window.innerWidth <= 950);
+  const [hideItems, setHideItems] = useState(true);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleResize = () => {
       setShowIcon(window.innerWidth <= 950);
       if (window.innerWidth > 950) {
-        setHideItems(false); // Show menu items when resizing above 975px
+        setHideItems(false);
+      } else {
+        setHideItems(true);
       }
     };
 
@@ -32,10 +34,12 @@ const NavBar = ({ scrollToSection }) => {
       });
     };
 
-    // Initial setup and cleanup for resize and scroll event listeners
-    handleScroll();
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
+    
+    handleResize();
+    handleScroll();
+
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
@@ -48,22 +52,27 @@ const NavBar = ({ scrollToSection }) => {
 
   const handleItemClick = (id) => {
     scrollToSection(id);
-    setActiveSection(id); // Update active section immediately on click
-    if (window.innerWidth <= 975) {
-      setHideItems(true); // Close menu items after clicking on a section (mobile view)
+    setActiveSection(id);
+    if (window.innerWidth <= 950) {
+      setHideItems(true);
     }
   };
 
   return (
     <nav className="navbar">
       <div className={`nav-bar ${activeSection}-bg`}>
-        <h3  className={`nav-link ${activeSection}` }>Jay Prajapati</h3>
+        <h3 className={`nav-link ${activeSection}`}>Jay Prajapati</h3>
+        {showIcon && (
+          <div className="menu-icon" onClick={toggleItemsVisibility}>
+            <i className="fas fa-bars navbar-burger"></i>
+          </div>
+        )}
         <div className={`menu-items ${hideItems ? "hidden" : ""}`}>
           <ul>
             {["home", "aboutme", "skills", "experience", "projects"].map((section) => (
               <li key={section}>
                 <div
-                  className={`nav-link ${activeSection}` }
+                  className={`nav-link ${activeSection}`}
                   onClick={() => handleItemClick(section)}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -72,11 +81,6 @@ const NavBar = ({ scrollToSection }) => {
             ))}
           </ul>
         </div>
-        {showIcon && (
-          <div className="menu-icon" onClick={toggleItemsVisibility}>
-            <i className="fas fa-bars"></i>
-          </div>
-        )}
       </div>
     </nav>
   );

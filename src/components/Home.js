@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 import "./Home.css";
-import NavBar from "./NavBar";
 import Skills from "./Skills";
 import AboutMe from "./AboutMe";
 import Experience from "./Experience";

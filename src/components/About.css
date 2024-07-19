@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .aboutcontainer {
@@ -12,53 +13,73 @@
   align-items: center;
   color: #0d47a1;
   padding-top: 70px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #e0f2f1;
-  /* Adjust as needed */
 }
 
 .abouttitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Adjust margin as needed */
+  margin-bottom: 20px;
 }
 
 .abouttext {
-  font-size: 100px; /* Adjust font size */
-  text-align: center; /* Center text horizontally */
+  font-size: 60px; 
+  text-align: center;
 }
 
 .aboutsec {
   width: 70%;
   font-size: 20px;
-  padding: 50px;
+  padding: 20px;
   animation: slideRight 1.5s forwards;
 }
+
 .aboutsec h3 {
-  margin: 20px;
+  margin: 20px 0;
 }
 
-@media (max-width: 950px) {
-
+@media (max-width: 1150px) {
   .abouttext {
-    font-size: 60px; /* Further decrease font size for smaller screens */
-  }
-  .aboutsec {
-    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 50px;
   }
   .aboutsec {
     width: 80%;
+    padding: 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 950px) {
+  .abouttext {
+    font-size: 40px;
+  }
+  .aboutsec {
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .abouttext {
+    font-size: 35px;
+  }
+  .aboutsec {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 500px) {
   .abouttext {
-    font-size: 30px; /* Further decrease font size for smaller screens */
+    font-size: 30px;
   }
-
   .aboutsec {
     width: 100%;
+    padding: 10px;
     font-size: 16px;
   }
 }
